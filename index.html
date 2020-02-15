@@ -75,11 +75,10 @@
             </h2>
             <article class="text-skills">
                 <ul>
-                    <li class="skill"><span>Python</span></li>
                     <li class="skill"><span>Git & markdown</span></li>
-                    <li class="skill"><span>Pascal</span></li>
                     <li class="skill"><span>html</span></li>
                     <li class="skill"><span>CSS</span></li>
+                    <li class="skill"><span>JavaScript</span></li>
                 </ul>
             </article>
     </div>
@@ -93,18 +92,39 @@
         </h2>
         <code class="code-text">
             <pre>
-                a = [ 1, 2 ,3 , 4, 5, 6, 8, 9, 11]
-                b = 9
-                l = 0
-                r = len(a)
-                m = 0
-                while l + 1 < r:
-                    m = (l + r) // 2
-                    if b > a[m]:
-                        l = m
-                    else:
-                        r = m
-                print(a[r])
+               function Input(numbers) {
+    let value = prompt('chislo', 0);
+    if (value == '' ) {
+        Input(numbers);
+    } else if(value == null) {
+        return;
+    }else if (!isFinite(value)) {
+        sum();
+        return;
+    }
+    numbers.push(+value)
+    Input(numbers);
+    function sum() {
+        let com = 0;
+        let symv;
+        if (value == 'sum') {
+            symv = '+';
+        }
+        for (let chislo of numbers) {
+            if (com == 0) {
+                com = chislo;
+                continue;
+            }
+            com += symv;
+            com += chislo;
+        }
+        alert(eval(com));
+    }
+ 
+}
+
+Input([]);
+
             </pre>
             
         </code>
@@ -122,26 +142,12 @@
         <ul class="my-education">
             <li>
                 <span>
-                    2011-2016 Grodno State University named 
-                    after Yanka Kupala, Faculty of 
-                    Physics and Technology
+                  2015-2018 Grodno State University named after Yanka Kupala, Faculty of Mathematics and Computer Science.
                 </span>
             </li>
             <li>
                 <span>
-                    august 2019 online 
-                    courses <a href="https://stepik.org/">stepik.org</a>  - "programming on python" - <a href="https://stepik.org/cert/215890">certificate.</a>
-                </span>
-            </li>
-            <li>
-                <span>
-                    January 2020 online 
-                    courses <a href="https://stepik.org/">stepik.org</a>  - "Python: fundamentals and applications" - <a href="https://stepik.org/cert/271111">certificate.</a>
-                </span>
-            </li>
-            <li>
-                <span>
-                    January 2020 Belhard academy -  "Python Programming Course"
+                   From 2018 to 2019 he served in the armed forces of the republic of Belarus.
                 </span>
             </li>
         </ul>
@@ -156,7 +162,7 @@
             </strong>
         </h2>
         <span class="eng-text">
-            <p>English level A1 - A2</p>
+            <p>English level A1 </p>
         </span>
     </div>
 </section>
